@@ -17,41 +17,45 @@ ball = vector(-200, -200)
 speed = vector(0, 0)
 targets = []
 
+
 def tap(x, y):
-    "Respond to screen tap."
+    #"Respond to screen tap."
     if not inside(ball):
         ball.x = -199
         ball.y = -199
-        speed.x = (x + 200) / 25
-        speed.y = (y + 200) / 25
+        speed.x = (x + 200) / 25 #Cambiar velocidad de la bola roja en el eje x
+        speed.y = (y + 200) / 25 #Cambiar velocidad de la bola roja en el eje y
+
 
 def inside(xy):
-    "Return True if xy within screen."
+    #"Return True if xy within screen."
     return -200 < xy.x < 200 and -200 < xy.y < 200
 
+
 def draw():
-    "Draw ball and targets."
+    #"Draw ball and targets."
     clear()
 
     for target in targets:
         goto(target.x, target.y)
-        dot(20, 'blue')
+        dot(20, 'blue') #Cambia el tamaño de las bolas azules
 
     if inside(ball):
         goto(ball.x, ball.y)
-        dot(6, 'red')
+        dot(6, 'red') #Cambia el tamaño de las bolas rojas
 
     update()
 
+
 def move():
-    "Move ball and targets."
+    #"Move ball and targets."
     if randrange(40) == 0:
         y = randrange(-150, 150)
         target = vector(200, y)
         targets.append(target)
 
     for target in targets:
-        target.x -= 0.5
+        target.x -= 2  #Cambiar la velocidad de las bolas azules
 
     if inside(ball):
         speed.y -= 0.35
@@ -72,7 +76,8 @@ def move():
 
     ontimer(move, 50)
 
-setup(420, 420, 370, 0)
+
+setup(420, 420, 370, 0) #tamaño de la pantalla del juego 
 hideturtle()
 up()
 tracer(False)
