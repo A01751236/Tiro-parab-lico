@@ -68,7 +68,7 @@ def move():
 
     for target in targets:
         if not inside(target):
-            return
+           targets.remove(target)
 
     ontimer(move, 50)
 
