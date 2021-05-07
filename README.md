@@ -1,5 +1,5 @@
 # Tiro-parab-lico
-iniciamos con el codigo base que incluía:
+Iniciamos con el codigo base que incluía:
 * Funcionamiento estándar del juego
 * Simulacion del tiro del proyectil
 
