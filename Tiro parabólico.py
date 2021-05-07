@@ -72,8 +72,8 @@ def move():
 
     for target in targets:
         if not inside(target):
-           targets.remove(target)
-
+           targets.remove(target)   #Si el target se sale de la pantalla se remueve del conjunto de targets sin acabar el juego
+                                    #Como nuevos targets se generan en automático es como si se recolocara
     ontimer(move, 50)
 
 
