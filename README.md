@@ -4,7 +4,7 @@ Iniciamos con el codigo base que incluía:
 * Simulacion del tiro del proyectil
 
 Agregamos:
-* Velocidades de las bolas
-* Hacer que el juego nunca termine
+* Emmanuel: Velocidades de las bolas
+* Javier: Hacer que el juego nunca termine
 * Introducir comentarios al programa
 
